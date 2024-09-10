@@ -21,6 +21,14 @@ const generadorIconoRandom = () => {
   return iconosRandom;
 };
 
+//Funcion para recargar la pagina.
+function recargar() {
+  const button = document.getElementById("button");
+  button.addEventListener("click", () => {
+    location.reload();
+  });
+}
+
 window.onload = function() {
   let valorCard = generadorValorRandom();
   let iconoCardIndex = generadorIconoRandom();
@@ -39,4 +47,5 @@ window.onload = function() {
     iconoSuperiorFinal.classList.add("red");
     iconoInferiorFinal.classList.add("red");
   }
+  recargar();
 };
